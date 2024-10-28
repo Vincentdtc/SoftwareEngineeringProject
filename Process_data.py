@@ -1,5 +1,4 @@
 import numpy as np
-from Import_data import create_dict
 
 def process_data(data):
     dict = {}
@@ -21,7 +20,3 @@ def process_data(data):
         dict[column]['lower_bound'] = lower_bound
 
     return dict
-
-# d = create_dict()
-# test = process_data(d)
-# print(np.shape(test['E694D']['upper_bound']))

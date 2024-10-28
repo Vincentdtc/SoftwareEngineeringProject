@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 
-def create_dict(path='Experimental_data'):
+def parse_data(path='Experimental_data'):
     dict = {}
     dir = os.listdir(path)
     for filename in dir:
@@ -11,5 +11,3 @@ def create_dict(path='Experimental_data'):
         dict[filename] = data
     return dict
 
-# output = create_dict()
-# print(output['Data_22022023.xlsx'].head())
