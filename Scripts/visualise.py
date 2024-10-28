@@ -4,7 +4,7 @@ import numpy as np
 
 def create_fig(data, params=[0.3,12]):
     alpha, size = params
-    time = np.linspace(0, 600, 601) # min
+    time = np.linspace(0, 600, 596) # min
 
     for key in data.keys():
 

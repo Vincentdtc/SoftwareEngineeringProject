@@ -1,13 +1,21 @@
 import numpy as np
 
-def process_data(data):
+def moving_average(x, N):
+    n = int(N/2)
+    y = x[0]
+    a=np.empty(n); a.fill(y)
+    cumsum = np.cumsum(np.insert(x, 0, a)) 
+    return (cumsum[N:] - cumsum[:-N]) / float(N)
+
+def process_data(input, N=10):
     dict = {}
-    for column in data[next(iter(data))]:
+    for column in input[next(iter(input))]:
         dict[column] = {}
          # loops through column names of the first entry of the dict.
         list = [] # contains raw data per entry
-        for key in data.keys():
-            list.append(data[key][column])
+        for key in input.keys():
+            data = input[key][column]
+            list.append(moving_average(data, N))
         # calculate mean and std per data category
         mean_trace = np.mean(list, axis=0)
         std = np.std(list, axis=0)
