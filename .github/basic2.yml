@@ -32,6 +32,6 @@ jobs:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{259460b7-0899-49c3-b459-0630665e52e0}}
           fail_ci_if_error: true
           files: coverage.xml
