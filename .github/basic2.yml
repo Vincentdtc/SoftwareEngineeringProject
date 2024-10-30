@@ -1,37 +1,5 @@
-name: Coverage
-
-on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip setuptools wheel
-          python -m pip install .[dev]
-
-      - name: Run coverage
-        run: |
-          pytest --cov-config=.coveragerc --cov=./ci_course --cov-report=xml
-          cat coverage.xml
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{259460b7-0899-49c3-b459-0630665e52e0}}
-          fail_ci_if_error: true
-          files: coverage.xml
+- name: Upload test results to Codecov
+  if: ${{ !cancelled() }}
+  uses: codecov/test-results-action@v1
+  with:
+    token: ${{ secrets.CODECOV_TOKEN }}
