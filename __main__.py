@@ -1,4 +1,4 @@
-from Import_data import parse_data
+from import_data import parse_data
 from Process_data import process_data
 from visualise import create_fig
 
