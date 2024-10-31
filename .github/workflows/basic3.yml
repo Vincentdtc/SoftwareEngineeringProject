@@ -27,7 +27,8 @@ jobs:
           python -m pip install openpyxl
       - name: Run coverage
         run: |
-          python -m pytest --cov-config=.coveragerc --cov=./tests/import_test 
+          python -m pytest --cov-config=.coveragerc --cov=scripts
+          # ./tests/import_test 
           # --cov-report=xml
           # cat coverage.xml
 
