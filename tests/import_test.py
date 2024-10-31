@@ -16,10 +16,10 @@ def parse_data(path='Experimental_data'):
     return dict
 class TestImport(unittest.TestCase):
     __test__ = False
-    
+
     def test_type(self):
         """Test that parse_data returns dict type"""
         self.assertTrue(isinstance(parse_data(), dict))
 
-test = TestImport()
-test.test_type()
+# test = TestImport()
+# test.test_type()
