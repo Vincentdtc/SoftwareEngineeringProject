@@ -18,4 +18,5 @@ def create_fig(data, params=[0.3,12]):
     plt.xlabel('Time (s)', fontsize=size)
     plt.tight_layout()
     plt.savefig('Output.png')
-    return plt.show()
+    plt.show()
+    return 
