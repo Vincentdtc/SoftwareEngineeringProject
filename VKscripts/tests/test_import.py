@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 import os
 
-import VKscripts as sc
+import VKscripts as vk
 #import sys
 
 #sys.path.insert(1,os.getcwd())
@@ -21,7 +21,7 @@ class TestImport(unittest.TestCase):
 
     def test_type(self):
         """Test that parse_data returns dict type"""
-        self.assertTrue(isinstance(sc.import_data.parse_data(), dict))
+        self.assertTrue(isinstance(vk.import_data.parse_data(), dict))
 
 # test = TestImport()
 # test.test_type()

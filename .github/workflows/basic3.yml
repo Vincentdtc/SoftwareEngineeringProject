@@ -27,10 +27,8 @@ jobs:
           python -m pip install openpyxl
       - name: Run coverage
         run: |
-          python -m pytest --cov-config=.coveragerc --cov=VKscripts
-          # ./tests/import_test 
-          # --cov-report=xml
-          # cat coverage.xml
+          python -m pytest --cov-config=.coveragerc --cov=VKscripts --cov-report=xml
+          cat coverage.xml
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3

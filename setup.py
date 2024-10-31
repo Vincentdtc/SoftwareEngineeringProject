@@ -53,7 +53,7 @@ setup(
     url='https://github.com/SABS-R3/2020-software-engineering-projects-pk',
 
     # Packages to include
-    packages=find_packages(include=('scripts', 'pkmodel.*')),
+    packages=find_packages(include=('VKscripts', 'VKscripts.*')),
 
     # List of dependencies
     install_requires=[
