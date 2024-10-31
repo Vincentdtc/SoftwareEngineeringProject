@@ -1,4 +1,4 @@
-- name: Upload test results to Codecov
+name: Upload test results to Codecov
   if: ${{ !cancelled() }}
   uses: codecov/test-results-action@v1
   with:
